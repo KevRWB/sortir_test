@@ -15,25 +15,25 @@ class VillesFixtures extends Fixture implements DependentFixtureInterface
         $niort->setNom('Niort');
         $niort->setCodePostal(7900);
         $manager->persist($niort);
-        $this->addReference('ville-niort');
+        $this->addReference('ville-niort', $niort);
 
         $rennes = new Ville();
         $rennes->setNom('Rennes');
         $rennes->setCodePostal(35000);
         $manager->persist($rennes);
-        $this->addReference('ville-rennes');
+        $this->addReference('ville-rennes', $rennes);
 
         $nantes = new Ville();
         $nantes->setNom('Nantes');
         $nantes->setCodePostal(4400);
         $manager->persist($nantes);
-        $this->addReference('ville-nantes');
+        $this->addReference('ville-nantes', $nantes);
 
         $quimper = new Ville();
         $quimper->setNom('Quimper');
         $quimper->setCodePostal(2900);
         $manager->persist($quimper);
-        $this->addReference('ville-quimper');
+        $this->addReference('ville-quimper', $quimper);
 
         $manager->flush();
     }

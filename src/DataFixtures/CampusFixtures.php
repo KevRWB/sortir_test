@@ -14,22 +14,22 @@ class CampusFixtures extends Fixture implements DependentFixtureInterface
         $nantes = new Campus();
         $nantes->setNom('Nantes');
         $manager->persist($nantes);
-        $this->addReference('campus-nantes');
+        $this->addReference('campus-nantes', $nantes);
 
         $rennes = new Campus();
         $rennes->setNom('Rennes');
         $manager->persist($rennes);
-        $this->addReference('campus-rennes');
+        $this->addReference('campus-rennes', $rennes);
 
         $quimper = new Campus();
         $quimper->setNom('Quimper');
         $manager->persist($quimper);
-        $this->addReference('campus-quimper');
+        $this->addReference('campus-quimper', $quimper);
 
         $niort = new Campus();
         $niort->setNom('Niort');
         $manager->persist($niort);
-        $this->addReference('campus-niort');
+        $this->addReference('campus-niort', $niort);
 
         $manager->flush();
     }
